@@ -1,0 +1,9 @@
+churn-envy/
+__pycache__/
+.env
+data/raw/
+data/processed/
+models/
+mlruns/
+.ipynb_checkpoints/
+chroma_db/
