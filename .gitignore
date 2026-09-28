@@ -1,9 +1,21 @@
+# Virtual environment
 churn-envy/
+
+# Python cache
 __pycache__/
+*.pyc
+
+# Secrets
 .env
+
+# Data and models (too big / sensitive for Git)
 data/raw/
 data/processed/
 models/
+
+# Tool outputs
 mlruns/
-.ipynb_checkpoints/
+mlartifacts/
 chroma_db/
+.ipynb_checkpoints/
+*.egg-info/
