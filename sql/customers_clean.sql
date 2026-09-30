@@ -1,0 +1,23 @@
+SELECT
+    customerID                                AS customer_id,
+    gender                                    AS gender,
+    SeniorCitizen                             AS senior_citizen,
+    Partner                                   AS partner,
+    Dependents                                AS dependents,
+    tenure                                    AS tenure,
+    PhoneService                              AS phone_service,
+    MultipleLines                             AS multiple_lines,
+    InternetService                           AS internet_service,
+    OnlineSecurity                            AS online_security,
+    OnlineBackup                              AS online_backup,
+    DeviceProtection                          AS device_protection,
+    TechSupport                               AS tech_support,
+    StreamingTV                               AS streaming_tv,
+    StreamingMovies                           AS streaming_movies,
+    Contract                                  AS contract,
+    PaperlessBilling                          AS paperless_billing,
+    PaymentMethod                             AS payment_method,
+    MonthlyCharges                            AS monthly_charges,
+    TRY_CAST(TRIM(TotalCharges) AS DOUBLE)    AS total_charges,
+    CASE WHEN Churn = 'Yes' THEN 1 ELSE 0 END AS churned
+FROM {source}
