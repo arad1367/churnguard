@@ -19,3 +19,7 @@ mlartifacts/
 chroma_db/
 .ipynb_checkpoints/
 *.egg-info/
+
+# Private keys
+.secrets/
+*.p8
