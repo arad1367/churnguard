@@ -41,3 +41,15 @@ Interpretation: _**
 ## Explainability
 
 Top global drivers (SHAP): **_, _**, \_\_\_
+
+## Other models considered
+
+| Model                           | CV PR-AUC | CV Brier | Decision                                                       |
+| ------------------------------- | --------- | -------- | -------------------------------------------------------------- |
+| XGBoost (tuned)                 | \_\_\_    | \_\_\_   | Within tolerance of logistic regression; more complex          |
+| Random forest                   | \_\_\_    | \_\_\_   | No gain                                                        |
+| PyTorch MLP (regularized)       | \_\_\_    | \_\_\_   | No gain on small tabular data; more complex, larger dependency |
+| PyTorch MLP (no regularization) | \_\_\_    | \_\_\_   | Overfits (val loss rises after epoch \_\_\_)                   |
+
+Conclusion: logistic regression remains champion: equal performance,
+best calibration, simplest to explain and serve.
